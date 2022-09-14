@@ -1,0 +1,11 @@
+digraph "order-domain" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "com.food.ordering.system:order-domain:pom"[label=<order-domain>]
+  "junit:junit:jar"[label=<junit<font point-size="10"><br/>(test)</font>>]
+
+  // Edge Definitions:
+  "com.food.ordering.system:order-domain:pom" -> "junit:junit:jar"
+}

@@ -1,0 +1,25 @@
+digraph "order-container" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "com.food.ordering.system:order-container:jar"[label=<order-container>]
+  "com.food.ordering.system:order-domain-core:jar"[label=<order-domain-core>]
+  "com.food.ordering.system:order-application-service:jar"[label=<order-application-service>]
+  "com.food.ordering.system:order-application:jar"[label=<order-application>]
+  "com.food.ordering.system:order-data-access:jar"[label=<order-data-access>]
+  "com.food.ordering.system:order-messaging:jar"[label=<order-messaging>]
+  "org.hamcrest:hamcrest-core:jar"[label=<hamcrest-core<font point-size="10"><br/>(test)</font>>]
+  "org.hamcrest:hamcrest:jar"[label=<hamcrest<font point-size="10"><br/>(test)</font>>]
+  "junit:junit:jar"[label=<junit<font point-size="10"><br/>(test)</font>>]
+
+  // Edge Definitions:
+  "com.food.ordering.system:order-container:jar" -> "com.food.ordering.system:order-domain-core:jar"
+  "com.food.ordering.system:order-container:jar" -> "com.food.ordering.system:order-application-service:jar"
+  "com.food.ordering.system:order-container:jar" -> "com.food.ordering.system:order-application:jar"
+  "com.food.ordering.system:order-container:jar" -> "com.food.ordering.system:order-data-access:jar"
+  "com.food.ordering.system:order-container:jar" -> "com.food.ordering.system:order-messaging:jar"
+  "org.hamcrest:hamcrest-core:jar" -> "org.hamcrest:hamcrest:jar"
+  "junit:junit:jar" -> "org.hamcrest:hamcrest-core:jar"
+  "com.food.ordering.system:order-container:jar" -> "junit:junit:jar"
+}
