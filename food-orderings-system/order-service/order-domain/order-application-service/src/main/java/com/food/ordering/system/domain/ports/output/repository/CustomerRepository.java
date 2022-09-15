@@ -1,4 +1,4 @@
-package com.food.ordering.system.ports.output.repository;
+package com.food.ordering.system.domain.ports.output.repository;
 
 import com.food.ordering.system.order.service.domain.entity.Customer;
 

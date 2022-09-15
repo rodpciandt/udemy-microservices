@@ -1,4 +1,4 @@
-package com.food.ordering.system.ports.output.message.publisher.payment;
+package com.food.ordering.system.domain.ports.output.message.publisher.payment;
 
 import com.food.ordering.system.domain.event.DomainEvent;
 import com.food.ordering.system.domain.event.publisher.DomainEventPublisher;
