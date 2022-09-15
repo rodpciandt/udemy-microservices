@@ -12,5 +12,6 @@ public class OrderTrackCommandHandler {
 
     TrackOrderResponse trackOrder(TrackOrderQuery trackOrderQuery) {
 
+        return null;
     }
 }
