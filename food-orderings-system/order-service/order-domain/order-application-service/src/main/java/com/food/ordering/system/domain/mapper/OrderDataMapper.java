@@ -4,6 +4,7 @@ package com.food.ordering.system.domain.mapper;
 import com.food.ordering.system.domain.dto.create.CreateOrderCommand;
 import com.food.ordering.system.domain.dto.create.CreateOrderResponse;
 import com.food.ordering.system.domain.dto.create.OrderAddress;
+import com.food.ordering.system.domain.dto.track.TrackOrderResponse;
 import com.food.ordering.system.domain.vo.CustomerId;
 import com.food.ordering.system.domain.vo.Money;
 import com.food.ordering.system.domain.vo.ProductId;
@@ -15,6 +16,7 @@ import com.food.ordering.system.order.service.domain.entity.Restaurant;
 import com.food.ordering.system.order.service.domain.vo.StreetAddress;
 import org.springframework.stereotype.Component;
 
+import javax.sound.midi.Track;
 import java.util.List;
 import java.util.UUID;
 
@@ -64,5 +66,13 @@ public class OrderDataMapper {
         return new StreetAddress(UUID.randomUUID(), address.getStreet(), address.getPostalCode(), address.getCity());
     }
 
+
+    public TrackOrderResponse orderToTrackOrderResponse(Order order) {
+        return TrackOrderResponse.builder()
+                .orderTrackingId(order.getTrackingId().getValue())
+                .orderStatus(order.getOrderStatus())
+                .failureMessages(order.getFailureMessages())
+                .build();
+    }
 
 }
